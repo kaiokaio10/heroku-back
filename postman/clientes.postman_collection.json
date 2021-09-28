@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "abaa2aba-ea40-4d2c-bbdc-e93bb4519b5e",
+		"name": "clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeCompleto\" : \"kaio\",\r\n    \"idade\": \"18\",\r\n    \"endereco\":\"qnn 24\",\r\n    \"numeroTelefone\":\"91919119\",\r\n    \"cpf\":\"369.333.878-70\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				},
+				"description": "criando um novo usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente/listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"listar"
+					]
+				},
+				"description": "listar todos os clientes registrados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente/delete/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/delete/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"delete",
+						"10"
+					]
+				},
+				"description": "deleta por id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"13\",\r\n    \"nomeCompleto\" : \"kaio\",\r\n    \"idade\": \"18\",\r\n    \"endereco\":\"qnn 24\",\r\n    \"numeroTelefone\":\"11194482\",\r\n    \"cpf\":\"369.333.878-70\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					]
+				},
+				"description": "modificiar algum dado do usuario"
+			},
+			"response": []
+		}
+	]
+}
