@@ -17,11 +17,11 @@ public class ClienteDTO {
     
     private String nomeCompleto;
     
-    private String idade;
+    private Integer idade;
     
     private String endereco;
     
-    private int numeroTelefone;
+    private Integer numeroTelefone;
     
 	private String cpf;
 

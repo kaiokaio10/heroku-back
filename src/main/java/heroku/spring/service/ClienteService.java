@@ -27,12 +27,10 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository repository;
 	
-	
 	@Autowired
 	private MessageSource message;
 	
 	public  List<Cliente> listar() {
-		
         return repository.findAll();
     }
 	
@@ -87,10 +85,10 @@ public class ClienteService {
         return repository.findById(id)
                 .orElseThrow(() -> new ClienteNaoEncontradaException(id));
     }
-	private Cliente verifyIfExistscpf(String cpf) throws ClienteNaoEncontradaException {
-        return repository.findByCPF(cpf)
-                .orElseThrow(() -> new ClienteNaoEncontradaException(cpf));
-    }
+//	private Cliente verifyIfExistscpf(String cpf) throws ClienteNaoEncontradaException {
+//        return repository.findByCPF(cpf)
+//                .orElseThrow(() -> new ClienteNaoEncontradaException(cpf));
+//    }
 	
 	public void deletarId(Long id) throws ClienteNaoEncontradaException {
         verifyIfExists(id);

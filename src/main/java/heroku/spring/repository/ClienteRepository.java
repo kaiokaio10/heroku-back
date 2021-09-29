@@ -19,6 +19,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long>  {
 			  +"ORDER BY CLI.nomeCompleto ASC"	)
 	List<Cliente> pesquisaPorNome(@Param("nomeCompleto") String nome);
 
-	Optional<Cliente> findByCPF(String cpf);
+	Optional<Cliente> findByCpf(String cpf);
 
 }

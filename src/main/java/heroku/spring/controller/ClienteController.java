@@ -31,7 +31,7 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/cliente")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 @Api(value = "API REST Cliente Builder")
-public class ClienteControler {
+public class ClienteController {
 	
 	private final ClienteService service;
 	
