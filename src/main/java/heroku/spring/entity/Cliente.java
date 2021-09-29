@@ -26,7 +26,7 @@ public class Cliente {
     @Column(name ="ID")
     private Long id;
 
-    @Column(nullable = false, unique = true,name = "NOMECOMPLETO")
+    @Column(nullable = false, unique = true,name = "NOME_COMPLETO")
     private String nomeCompleto;
 
     @Column(nullable = false,name = "IDADE")
@@ -35,7 +35,7 @@ public class Cliente {
     @Column(nullable = false,name ="ENDERECO")
     private String endereco;
 
-    @Column(nullable = false,name ="NUMEROTELEFONE")
+    @Column(nullable = false,name ="NUMERO_TELEFONE")
     private Integer numeroTelefone;
     
     @Column(nullable = false, unique = true,name ="CPF")
