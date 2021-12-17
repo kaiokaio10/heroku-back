@@ -5,13 +5,22 @@ import org.springframework.http.HttpStatus;
 
 @SuppressWarnings("serial")
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class ClienteNaoEncontradaException extends Exception {
+public class ClienteNaoEncontradaException extends RuntimeException {
 	
-	public ClienteNaoEncontradaException(Long id) {
-		super(String.format("Pessoa com ID% s não encontrada", id));
+	public ClienteNaoEncontradaException() {
+		super();
 	}
-	public ClienteNaoEncontradaException(String nomeCompleto) {
-		super(String.format("Pessoa com ID% s não encontrada", nomeCompleto));
+
+	public ClienteNaoEncontradaException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public ClienteNaoEncontradaException(String message) {
+		super(message);
+	}
+
+	public ClienteNaoEncontradaException(Throwable cause) {
+		super(cause);
 	}
 
 }

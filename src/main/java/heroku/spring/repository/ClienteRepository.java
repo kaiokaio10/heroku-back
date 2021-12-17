@@ -17,7 +17,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long>  {
 	@Query("SELECT CLI FROM Cliente CLI                          "
 			  +"WHERE lower(CLI.nomeCompleto) like CONCAT('%', :nomeCompleto,'%')"
 			  +"ORDER BY CLI.nomeCompleto ASC"	)
-	List<Cliente> pesquisaPorNome(@Param("nomeCompleto") String nome);
+	List<Cliente> pesquisaPorNome(@Param("nomeCompleto") String nomeCompleto);
 
 	Optional<Cliente> findByCpf(String cpf);
 
